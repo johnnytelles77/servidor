@@ -4,7 +4,8 @@ import fs from "fs"
 let pathfile = "./src/data/products.json"  /// la ruta del json la ponemos en una variable 
 
 class ProductManager {
-    constructor() {
+    constructor(path) {
+        this.path = path;
         this.products = [];
     }
 
