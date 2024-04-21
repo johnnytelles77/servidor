@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "dev": "nodemon ./app.js",
+    "dev": "npx nodemon ./src/app.js",
     "test": "nodemon ./app.js"
   },
   "keywords": [],
@@ -19,4 +19,3 @@
     "express": "^4.19.2"
   }
 }
-
