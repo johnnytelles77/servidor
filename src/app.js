@@ -18,15 +18,15 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/products/;pid", async (req, res) => {
+app.get("/products/:pid", async (req, res) => {
 
     try {
 
         const { pid } = req.params;
 
-        const product = await productManager.getProductsById(parseInt(pid));
+        const product = await productManager.getProductById(parseInt(pid));
 
-        res.status(200),json(product);
+        res.status(200).json(product);
     } catch (error) {
         console.log(error)
     }

@@ -33,12 +33,12 @@ class ProductManager {
         }
 
         this.products.push(newProduct);  // agregar un nuevo producto al array 
-        await fs.promises.writeFile(pathfile, JSON.stringify(this.products));
+        await fs.promises.writeFile(this.path, JSON.stringify(this.products));
     }
 
     async getProducts(limit) {  // Muestra los productos del array
 
-        const productsJson = await fs.promises.readFile(pathfile, "utf8")
+        const productsJson = await fs.promises.readFile(this.path, "utf8")
         const products = JSON.parse(productsJson) || [];
 
         if(!limit) return products;
