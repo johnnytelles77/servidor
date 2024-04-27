@@ -2,7 +2,7 @@ import express from "express";
 import ProductManager from "./product-manager.js"
 
 const app = express();
-const productManager = new ProductManager();
+const productManager = new ProductManager("./src/data/products.json");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
